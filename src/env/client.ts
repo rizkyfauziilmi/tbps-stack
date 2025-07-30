@@ -7,4 +7,6 @@ export const env = createEnv({
   runtimeEnv: {
     // NEXT_PUBLIC_BASE_URL: process.env.NEXT_PUBLIC_BASE_URL,
   },
+  isServer: false,
+  emptyStringAsUndefined: true,
 });

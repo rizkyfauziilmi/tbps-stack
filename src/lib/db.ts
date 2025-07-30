@@ -5,8 +5,8 @@ const globalForPrisma = global as unknown as {
   prisma: PrismaClient;
 };
 
-const prisma = globalForPrisma.prisma || new PrismaClient();
+const db = globalForPrisma.prisma || new PrismaClient();
 
-if (env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;
+if (env.NODE_ENV !== "production") globalForPrisma.prisma = db;
 
-export default prisma;
+export default db;
