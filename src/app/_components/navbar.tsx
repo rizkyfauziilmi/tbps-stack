@@ -14,7 +14,7 @@ export const Navbar = () => {
     <nav className="sticky top-0 flex items-center justify-between py-2 px-6 bg-background h-14">
       <Link href="/">
         <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
-          Sekolah Merdeka
+          Navbar
         </h3>
       </Link>
       {isPending ? (
@@ -25,7 +25,7 @@ export const Navbar = () => {
         <Button asChild variant="outline">
           <Link href="/login">
             <LogInIcon />
-            Masuk
+            Login
           </Link>
         </Button>
       )}
