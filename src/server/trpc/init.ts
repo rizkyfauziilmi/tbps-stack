@@ -1,6 +1,5 @@
 import { initTRPC, TRPCError } from "@trpc/server";
 import { cache } from "react";
-import type { CreateNextContextOptions } from "@trpc/server/adapters/next";
 import superjson from "superjson";
 import { auth } from "../auth/auth";
 import { ZodError } from "zod";

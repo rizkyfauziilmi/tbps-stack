@@ -21,7 +21,7 @@ import {
 } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { Loader2Icon } from "lucide-react";
-import z from "zod";
+import type z from "zod";
 import { uploadPostSchema } from "@/server/trpc/schemas/post.schema";
 
 export const UploadPost = () => {
@@ -35,7 +35,7 @@ export const UploadPost = () => {
   const uploadPostMutationOptions = trpc.post.uploadPost.mutationOptions({
     onSuccess: () => {
       toast.success("Post uploaded successfully!");
-      queryClient.invalidateQueries({
+      void queryClient.invalidateQueries({
         queryKey: trpc.post.latestPost.queryKey(),
       });
     },

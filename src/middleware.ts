@@ -1,6 +1,6 @@
 import { betterFetch } from "@better-fetch/fetch";
-import { NextRequest, NextResponse } from "next/server";
-import { Session } from "./server/auth/auth";
+import { type NextRequest, NextResponse } from "next/server";
+import { type Session } from "./server/auth/auth";
 import { normalizePath } from "./server/lib/helper";
 
 const routeGroups = {
@@ -22,7 +22,7 @@ export async function middleware(request: NextRequest) {
     const { data } = await betterFetch<Session>("/api/auth/get-session", {
       baseURL: request.nextUrl.origin,
       headers: {
-        cookie: request.headers.get("cookie") || "",
+        cookie: request.headers.get("cookie") ?? "",
       },
     });
     session = data;

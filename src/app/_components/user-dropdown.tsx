@@ -22,17 +22,15 @@ import {
   SunIcon,
   SunMoonIcon,
 } from "lucide-react";
-import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import { generateFallbackProfile } from "@/lib/string";
-import { authClient, Session } from "@/server/auth/auth-client";
+import { authClient, type Session } from "@/server/auth/auth-client";
 
 interface UserDropdownProps {
   session: Session;
 }
 
 export const UserDropdown = ({ session }: UserDropdownProps) => {
-  const router = useRouter();
   const { setTheme, theme } = useTheme();
 
   const { user } = session;

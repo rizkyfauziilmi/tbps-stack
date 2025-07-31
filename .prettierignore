@@ -4,3 +4,4 @@ dist
 .next
 generated
 prisma/migrations
+src/generated
