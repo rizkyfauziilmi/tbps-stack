@@ -21,6 +21,7 @@ model User {
   Post          Post[]
 
   @@unique([email])
+  @@index([email])
   @@map("user")
 }
 
@@ -49,6 +50,7 @@ model Session {
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([token])
+  @@index([userId, token])
   @@map("session")
 }
 
@@ -68,6 +70,7 @@ model Account {
   createdAt             DateTime
   updatedAt             DateTime
 
+  @@index([userId])
   @@map("account")
 }
 
@@ -79,5 +82,6 @@ model Verification {
   createdAt  DateTime?
   updatedAt  DateTime?
 
+  @@index([identifier])
   @@map("verification")
 }
