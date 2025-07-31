@@ -125,15 +125,7 @@ export const UserDropdown = ({ session }: UserDropdownProps) => {
           </DropdownMenuSub>
           <DropdownMenuItem
             variant="destructive"
-            onSelect={async () => {
-              await authClient.signOut({
-                fetchOptions: {
-                  onSuccess: () => {
-                    router.push("/login");
-                  },
-                },
-              });
-            }}
+            onSelect={async () => await authClient.signOut()}
           >
             <DoorOpenIcon className="mr-2 h-4 w-4" />
             Logout

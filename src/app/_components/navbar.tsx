@@ -11,7 +11,7 @@ export const Navbar = () => {
   const { data: session, isPending } = authClient.useSession();
 
   return (
-    <nav className="sticky top-0 flex items-center justify-between py-2 px-6 bg-background h-14">
+    <nav className="sticky top-0 flex items-center justify-between py-2 px-6 bg-background h-14 border-b">
       <Link href="/">
         <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
           Navbar

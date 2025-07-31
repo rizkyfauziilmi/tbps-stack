@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "./_components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TRPCReactProvider } from "@/server/trpc/client";
+import { Toaster } from "@/components/ui/sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,6 +40,7 @@ export default function RootLayout({
           >
             <Navbar />
             <main>{children}</main>
+            <Toaster />
           </ThemeProvider>
         </TRPCReactProvider>
       </body>
