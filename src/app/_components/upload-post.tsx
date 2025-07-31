@@ -4,14 +4,12 @@ import { Button } from "@/components/ui/button";
 import { authClient } from "@/server/auth/auth-client";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
-import z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -23,10 +21,8 @@ import {
 } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { Loader2Icon } from "lucide-react";
-
-const uploadPostSchema = z.object({
-  title: z.string().min(1, "Title is required"),
-});
+import z from "zod";
+import { uploadPostSchema } from "@/server/trpc/schemas/post.schema";
 
 export const UploadPost = () => {
   const { data: session } = authClient.useSession();

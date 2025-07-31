@@ -1,14 +1,9 @@
-import z from "zod";
 import { createTRPCRouter, protectedProcedure } from "../init";
-import { TRPCError } from "@trpc/server";
+import { uploadPostSchema } from "../schemas/post.schema";
 
 export const postRouter = createTRPCRouter({
   uploadPost: protectedProcedure
-    .input(
-      z.object({
-        title: z.string().min(1, "Title is required"),
-      })
-    )
+    .input(uploadPostSchema)
     .mutation(async ({ ctx, input }) => {
       const { title } = input;
       const userId = ctx.session.user.id;
