@@ -5,7 +5,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { LogInIcon } from "lucide-react";
 import Link from "next/link";
 import { UserDropdown } from "./user-dropdown";
-import { authClient } from "@/lib/auth-client";
+import { authClient } from "@/server/auth/auth-client";
 
 export const Navbar = () => {
   const { data: session, isPending } = authClient.useSession();

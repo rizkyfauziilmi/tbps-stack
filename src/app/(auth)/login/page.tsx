@@ -11,7 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { authClient } from "@/lib/auth-client";
+import { authClient } from "@/server/auth/auth-client";
 
 export default function LoginPage() {
   const loginWithSocial = async (provider: "google") => {

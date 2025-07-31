@@ -1,7 +1,7 @@
 import { betterFetch } from "@better-fetch/fetch";
 import { NextRequest, NextResponse } from "next/server";
-import { Session } from "./lib/auth";
-import { normalizePath } from "./lib/helper";
+import { Session } from "./server/auth/auth";
+import { normalizePath } from "./server/lib/helper";
 
 const routeGroups = {
   auth: new Set(["/login", "/register"]),
