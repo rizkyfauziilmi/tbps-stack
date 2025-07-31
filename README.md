@@ -86,7 +86,7 @@ public/          # Static assets
 ### ⚠️ Important Notes
 
 - **Renaming the Project**: Update `package.json`, and replace all instances of `tbps-stack` in your codebase.
-- **Adding Features**: Create new routers in `src/server/trpc/routers/` and UI components in `src/components/ui/`.
+- **Adding Features**: Create new routers in `src/server/trpc/routers/`.
 - **Deployment Tips**: Use Vercel for easiest deployment. For Docker, ensure your database is accessible.
 - **License**: This template is for personal or private use. For commercial/open source, add your own license.
 
@@ -174,7 +174,7 @@ public/          # File statis
 ### ⚠️ Catatan Penting
 
 - **Ganti Nama Project**: Ubah `package.json` dan semua instance `tbps-stack` di kode.
-- **Tambah Fitur**: Buat router baru di `src/server/trpc/routers/` dan komponen UI di `src/components/ui/`.
+- **Tambah Fitur**: Buat router baru di `src/server/trpc/routers/`.
 - **Tips Deploy**: Gunakan Vercel untuk deploy paling mudah. Untuk Docker, pastikan database bisa diakses.
 - **Lisensi**: Template ini untuk penggunaan pribadi/privat. Untuk komersial/open source, tambahkan lisensi Anda sendiri.
 
