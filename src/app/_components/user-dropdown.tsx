@@ -136,7 +136,7 @@ export const UserDropdown = ({ session }: UserDropdownProps) => {
             }}
           >
             <DoorOpenIcon className="mr-2 h-4 w-4" />
-            Keluar
+            Logout
           </DropdownMenuItem>
         </DropdownMenuGroup>
       </DropdownMenuContent>
